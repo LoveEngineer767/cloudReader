@@ -1,364 +1,378 @@
-# CloudReader
+<p align="center">
+  <img src="assets/mascot/pip_flight_loop.gif" alt="Pip, the courier bird" width="200">
+</p>
 
-[![Apache License 2.0][1]][2]
-[![Apk][34]][35]
-[![Release Version][30]][31]
-[![API][3]][4]
+# AI Job Search
 
-<!--
-[![Codacy Badge][36]][37]
--->
+*The job search that runs on your machine.*
 
-> Kotlin && Netease cloud music Ui && Retrofit2 + RxJava2 + Room + MVVM-databinding && Wanandroid Api 
+<p align="center">
+  <a href="https://trendshift.io/repositories/43622?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-43622" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/43622/daily" alt="MadsLorentzen%2Fai-job-search | Trendshift" width="250" height="55"/></a>
+</p>
 
+[![CI](https://github.com/MadsLorentzen/ai-job-search/actions/workflows/ci.yml/badge.svg)](https://github.com/MadsLorentzen/ai-job-search/actions/workflows/ci.yml)
 
-## Introduce
-一款基于网易云音乐UI，使用WanAndroid Api，MVVM-DataBinding架构开发的符合Google Material Design阅读类的开源项目。
+An AI-powered job application framework built on [Claude Code](https://claude.com/claude-code). Fork it, fill in your profile, and let Claude evaluate job postings, tailor your CV, write cover letters, and prepare you for interviews.
 
+> Note: This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by Anthropic. Anthropic and Claude Code are referenced only to describe the toolchain this workflow uses.
+>
+> This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The only ways to support the project are the Ko-fi link below and contributing on GitHub.
 
-A netease cloud music based UI, using wanandroid Api development accord with Google Material Desgin reading class open source projects.
+## Does it actually work?
 
-## Screenshots
+I'm a geophysicist by training. When my position was cut in late 2025, I built this framework to run my own job search - the same `/scrape`, `/apply`, and `/interview` workflow in this repo, used weekly, on my own career. I was upfront about it with every employer I spoke to, and instead of counting against me, it usually sparked a genuine technical conversation.
 
-![](https://raw.githubusercontent.com/youlookwhat/CloudReader/master/file/images.png)
-![](https://raw.githubusercontent.com/youlookwhat/CloudReader/master/file/images2.png)
+Sixty-nine tailored applications, twenty first interviews, and one signed contract later, I started as an AI engineer in June 2026. People kept asking whether this actually works. It got me hired. Now it's yours.
 
-#### Gif Preview
+*The longer version, including the full application funnel, is on [LinkedIn](https://www.linkedin.com/in/mads-lorentzen/).*
 
-![](https://raw.githubusercontent.com/youlookwhat/CloudReader/master/file/cloudreader.gif)
+<p align="center">
+  <i>Did this save you a Sunday of cover-letter writing? Consider a coffee.<br>
+  Did it land you the job? Maybe two.</i> ☕
+</p>
 
-## Issues 宝贵意见
-如果有任何问题，请到github的[issue处][21]写上你不明白的地方，也可以通过下面提供的方式联系我，我会及时给予帮助。
+<p align="center">
+  <a href="https://ko-fi.com/madslorentzen">
+    <img src="https://storage.ko-fi.com/cdn/kofi3.png?v=6" alt="Buy me a coffee at ko-fi.com" height="40">
+  </a>
+</p>
 
-If you have any questions, please write to [the issue][21] of making you don't understand of place, also can contact me through here, I will help them in time.
-
-## Features 特性
-* 1、基本遵循Google Material Design设计风格。                                    
-* 2、MvvM-DataBinding的项目应用。                                    
-* 3、`NavigationView`搭配`DrawerLayout`的具体使用。                                    
-* 4、透明状态栏使用与版本适配。                                                                        
-* 5、RxBus代替EventBus进行组件之间通讯。                                    
-* 6、`ToolBar`的全方面使用。                                    
-* 7、`Glide`加载监听，获取缓存，圆形图片，高斯模糊。                                    
-* 8、水波纹点击效果详细使用与适配。                                    
-* 9、`Room`的基本使用。
-* 10、基于`DataBinding`的`ViewHolder`。                                    
-* 11、基于`DataBinding`的`BaseActivity`和`BaseFragment`。                                    
-* 12、`Fragment`懒加载模式。                                    
-* 13、`SwipeRefreshLayout`结合`RecyclerView`下拉刷新上拉加载。                                    
-* 14、`CoordinatorLayout`+`Behavior`实现标题栏渐变和滑动置顶。                                                                       
-* 15、深色模式的应用。                                                                       
-
-
-## See Detail
-> [项目介绍详情](https://github.com/youlookwhat/CloudReader/wiki/Introduction) | [细节优化详情](https://github.com/youlookwhat/CloudReader/wiki) | 🚀[**版本更新详情(V3.7.0)**](https://github.com/youlookwhat/CloudReader/wiki/Update-log)
-
-
-> 运行环境：
-> 	- targetSdkVersion: 34
-> 	- gradle: gradle-8.0-bin
-> 	- JDK17
-> 	- Android Studio Ladybug | 2024.2.1
-> 	- Runtime version: 21.0.3+-79915917-b509.11 aarch64
-> 	- VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
-> 	- macOS 15.3.1
-
-
-<!--
-### Download
-　[GitHub下载](https://www.coolapk.com/apk/127875)
-
-
-　  ![](https://raw.githubusercontent.com/youlookwhat/CloudReader/master/file/download_200.png)
--->
-
-### Documents 
- - [《云阅》一个仿网易云音乐UI，使用Gank.Io及豆瓣Api开发的开源项目][23]
- - [开发中所遇问题归纳（jar包的具体使用等）][24]
- - [App使用中的常见问题][25]
- - [开源项目CloudReader笔记][26]
- - [ByRecyclerView - 下拉刷新、加载更多、item点击/长按、万能分割线、粘性Header等][28]
- - [Android 深色模式的项目应用](https://juejin.cn/post/7022270811524300808)
-　
-
-### Version
-#### V3.8.3（2025-03-31）
- - 1、[新增] 新增了桌面快捷方式
- - 2、[升级] 升级了gradle、jdk、targetSdkVersion版本
- - 3、[优化] 代码优化
-
-#### V3.7.0（2021-11-09）
- - 1、[新增] 新增了玩安卓项目分类模块
- - 2、[移除] 移除了干货集中营模块
- - 3、[优化] 调整了子页面位置
-
-#### V3.6.0（2021-10-20）
- - 1、[新增] 新增了深色模式
- - 2、[新增] 更新了用户隐私协议
- - 3、[优化] 优化了网页内跳转应用
- - 4、[优化] 优化了菜单等部分样式
-
-#### V3.5.0（2021-01-23）
- - 1、[移除] 因Api失效去除电影模块，很遗憾
- - 2、[新增] 广场、问答、文章分享等功能 (Kotlin)
- - 3、[优化] Ui优化
-
-#### V3.4.4（2021-01-09）
- - 1、[修复] 修复电影模块数据问题
- - 2、[优化] 部分使用Kotlin，代码优化
-
-#### V3.4.3（2020-11-16）
- - 1、[新增] 去酷安应用市场评星
- - 2、[新增] WebView拦截简书直接打开App
- - 3、[修复] 即将上映电影显示问题
-
-#### V3.4.2（2020-08-25）
- - 1、[优化] 首页和干货页使用骨架图
- - 2、[优化] 电影页Api替换
- - 3、[优化] 代码整理 AndroidX / bymvvm / ByWebView
-
-#### V3.4.0（2020-05-20）
- - 1、[替换] 干货集中营Api更新
- - 2、[优化] 体系页面选择类别优化
- - 3、[优化] 首页、福利等页面Ui优化
-
-#### V3.3.0（2020-02-29）
- - 1、[新增] 公众号页面改为发现页面，并可订制
- - 2、[优化] 导航页面增加滑动置顶
- - 3、[优化] 启动图、代码等部分优化
-
-#### V3.2.0（2019-12-16）
- - 1、[新增] 热搜词等tag处使用[圆角有色水波纹](https://github.com/youlookwhat/CloudReader/blob/master/app/src/main/res/drawable-v21/shape_ripple_tag_bg.xml)点击效果
- - 2、[优化] 知识体系页面恢复及优化
- - 3、[优化] banner和ByRecyclerView版本升级优化
-
-#### V3.1.0（2019-11-15）
- - 1、[优化] 将所有列表展示的地方替换为[ByRecyclerView][28]
- - 2、[优化] WebView进度条替换为[WebProgress，使其加载进度平滑过渡。](https://github.com/youlookwhat/WebProgress)
- - 3、[优化] 我的收藏-网址内容倒序显示
- - 4、[修复] 修复了4.4系统状态栏适配问题
-
-#### V3.0.0（2019-09-30）
- - 1、[新增] 首页增加公众号栏目
- - 2、[新增] 玩安卓增加积分系统模块
- - 3、[新增] 赞赏云阅页面(每月后7天开启)
- - 4、[新增] 电影详情剧照查看大图使用转场动画
- - 5、[修复] 部分文章作者不显示修正
- - 6、[优化] 屏蔽网页里的广告
- - 7、[优化] 更改收藏图标等ui优化
-
-#### V2.9.5（2019-07-18）
- - 1、[新增] 首页增加项目分类api
- - 2、[新增] 增加历史搜索记录
- - 3、[优化] 知识体系页ui改版
- - 4、[优化] 导航数据页ui改版
- - 5、[优化] 统一TabLayout指示器样式
-
-#### V2.9.1（2019-06-05）
- - 1、[新增] BaseViewModel释放资源
- - 2、[修复] 适配Android9.0不允许http连接的问题
- - 3、[优化] 电影详情页等其他页面ui优化
-
-#### V2.9.0（2019-05-16）
- - 1、[新增] 时光网电影模块
- - 2、[修复] 隐藏豆瓣电影页面(api失效)
- - 3、[修复] 代码优化及修改部分bug
-
-#### V2.8.5（2019-05-06）
- - 1、[新增] 问题反馈内加入QQ群
- - 2、[升级] glide升级到4.9.0
- - 3、[优化] ui部分优化
- - 4、[修复] 修复若干bug
-
-#### V2.8.0（2019-03-21）
- - 1、[新增] 搜索页面
- - 2、[修复] 隐藏书籍分类页面(api失效)
- - 3、[修复] 修复收藏页面星星未选中的bug
-
-#### V2.7.5（2019-03-13）
- - 1、[升级] 玩android接口升级为https
- - 2、[升级] RxJava2.x升级
- - 3、[优化] 设置不能修改字体
- - 4、[优化] 优化导航数据等页面
- - 5、[修复] 代码优化及修改部分bug
-
-#### V2.7.0（2019-02-14）
- - 1、[新增] 知识体系详情页
- - 2、[优化] 项目主页优化
-
-#### V2.6.0（2019-01-16）
- - 1、[新增] 豆瓣即将上映电影数据
- - 2、[优化] 启动白屏问题优化
- - 3、[优化] RecyclerView列表加载优化
- - 4、[修复] 修复无邮箱应用时点击跳转崩溃问题
-
-<!-- 
-#### V2.5.0（12-28）
- - 1、[规范] 所有页面mvvm架构修正
- - 2、[优化] 将电影和书籍放置在一块
- - 3、[新增] 可[作为三方浏览器打开外部链接](https://www.jianshu.com/p/272bfb6c0779)
- - 4、[修复] 修复部分兼容性bug
-
-#### V2.2（12-05）
- - 1、[新增] 进入首页可以获取剪切板的链接
- - 2、[规范] 玩安卓模块mvvm修正
- - 3、[优化] 导航数据界面显示优化
- - 4、[优化] 电影、书籍和玩安卓首页等item点击效果
- - 5、[修复] 保存图片权限问题、上拉加载逻辑问题
-
-#### V2.0（10-26）
- - 1、[新增] 知识体系页面
- - 2、[新增] 导航数据页面
- - 3、[新增] 收藏网址功能
- - 4、[更改] 固定图片链接替换
- - 5、[更改] 暂时将书籍/段子页面移入我的收藏里
- - 6、[修复] 段子头像显示不全修复
- - 7、[优化] 首页ui及部分图片显示比例优化
-
-#### V1.9.4（05-21）
- - 1、[修复] 修复干货订制点击“选择分类”崩溃的bug
- - 2、[新增] 干货订制页面长按item增加[水波纹扩散效果](https://youlookwhat.github.io/2018/05/20/Android%20%E6%B0%B4%E6%B3%A2%E7%BA%B9%E6%95%88%E6%9E%9C%E7%9A%84%E6%8E%A2%E7%A9%B6/)
-
-#### V1.9.3（05-18）
- - 1、[新增] 玩安卓模块增加登录与收藏文章的功能
- - 2、[新增] 增加Room的使用
- - 3、[修复] 修复7.0以上系统主页显示错乱的bug
- - 4、[完善] 性能优化之[布局大幅优化](https://youlookwhat.github.io/2018/05/17/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E5%B8%83%E5%B1%80%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/)
- - 5、[完善] 完善体验修复若干bug
-
-#### V1.9.2（05-06）
- - 1、[完善] 主页显示结构修改
- - 2、[修复] 去掉内涵段子数据
- - 3、[修复] 解决“项目主页”页面两个布局的问题
- - 4、[完善] 布局优化及解决部分bug
-
-#### V1.9.1（02-27）
- - 1、[新增] 新增段子页面，长按条目可选择复制或分享
-
-#### V1.9.0（02-08）
- - 1、首页大幅调整，增加进入玩安卓页面和Trending页面的入口
- - 2、新增鸿洋玩安卓模块(部分功能)
- - 3、优化WebView网页显示，解决大部分问题,[详细](https://github.com/youlookwhat/WebViewStudy)
- - 4、尽可能规范MvvM框架，后期会慢慢调整
- - 5、使用fir.im更新接口，完善更新功能
-
-#### V1.8.3（11-14）
- - 1、[修复] 已选择分类退出App再次进入,type失效的问题
- - 2、[修复] 跳转B站视频显示网页错误的问题
-
-#### V1.8.2（3-30）
- - 1、[修复] 首页轮播图显示异常问题
- - 2、[修复] 干货订制页，刷新内容到底无内容后切换到其他类别，无法上拉加载的情况
-
-#### V1.8.1（3-7）
- - 1、[修复]修复首页有六个以上item时，图片显示不出的bug
-
-#### V1.8.0（3-3）
- - 1、[新增] 侧边栏增加“**登录GitHub账号**”和“**退出应用**”功能
- - 2、[新增] WebView新增“**分享到**”、“**复制链接**”、“**打开链接**”功能
- - 3、[新增] 使其系统更改字体无效
- - 4、[改进] 网络请求更换成``retrofit 2.x``
- - 5、[改进] 首页轮播图更换显示链接
- - 6、[优化] 进入主界面动画优化
- - 7、[优化] 兼容至7.0、升级关联库和代码优化等
-
-#### V1.5.0（1-29）
- - 1、**App体积大小从16M降到5.8M！**
- - 2、将App里固定的图片以移动到七牛。
- - 3、更改项目主页透明状态栏显示方式。
- - 4、更改每日推荐图片显示规则，使其不重复显示。
- - 5、更换过渡图图片。
- - 6、代码优化；删除多余资源。
-
-#### V1.2.0（1-18）
- - 1、更改每日推荐逻辑，使其一定有数据
- - 2、干货集中营的item改为CardView展示
- - 3、代码优化
-
-#### V1.1.0（1-15）
-
- - 1.书籍详情页面增加自定义元素共享切换动画，并可简单添加需要支持的详情页
- - 2.代码优化
- - 3.其他
-　　
--->
-
-
-## Thanks
- - 我几乎看过了所有关于Android仿网易云音乐的项目与文章，发现大部分做的都不够细致，也没有比较好的内容填充，于是决心自己着手做一个，才有了这个开源项目。这里列出主要参考的内容。
- 
- - 图片来源：[iconfont][6]、UI工程师[Sandawang](https://github.com/Sandawang)和网易云音乐App。
-
- - 主要数据来源：[玩Android][27]。
-
- - 使用到的开源库：[glide][11]、[bottomsheet][12]、[nineoldandroids][13]、[rxandroid][14]等等。
-
- 
-### Statement
-感谢[网易云音乐App](https://play.google.com/store/apps/details?id=com.netease.cloudmusic)提供参考，附上[《网易云音乐Android 3.0视觉设计规范文档》](http://www.25xt.com/appdesign/12385.html)。本人是网易云音乐的粉丝，使用了其中的部分素材，并非攻击，如构成侵权请及时通知我修改或删除。大部分数据来自于玩安卓、干货集中营和时光网，一切数据解释权都归张鸿洋、代码家和时光网所有。
- 
-## End
-> 注意：此开源项目仅做学习交流使用，如用到实际项目还需多考虑其他因素，请多多斟酌。如果你觉得不错，对你有帮助，欢迎点个star，follow，也可以帮忙分享给你更多的朋友，这是给我们最大的动力与支持。
-> 
-> 捐赠后均会被记录到列表中，可以留下友情链接，起到一定的推广作用。感谢大家的信任，[捐赠列表](https://github.com/youlookwhat/CloudReader/blob/master/file/admire.md)。
-
-
-## About me
- - **QQ：** 770413277
- - **Email：** jingbin127@163.com
- - **Blog：**[https://youlookwhat.github.io](https://youlookwhat.github.io)
- - **小红书：**[所思所梦](https://www.xiaohongshu.com/user/profile/59ba28cf5e87e72d410d84c1?xhsshare=CopyLink&appuid=59ba28cf5e87e72d410d84c1&apptime=1733105575&share_id=78c3ca8970d24a3eb9db04b1e4fcc45b)
- - **QQ交流群：**[![](https://img.shields.io/badge/%E7%BE%A4%E5%8F%B7-727379132-orange.svg?style=flat-square)](https://shang.qq.com/wpa/qunwpa?idkey=5685061359b0a767674cd831d8261d36b347bde04cc23746cb6570e09ee5c8aa)
+## What this is
+
+A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills are built for the Danish market (Jobindex, Jobnet, Akademikernes Jobbank, etc.), but the pattern is designed to be swapped for your local job boards.
+
+```
+/setup          /scrape              /apply <url>
+  |                |                     |
+  v                v                     v
+Fill in        Search job           Evaluate fit
+your profile   portals              Score & recommend
+  |                |                     |
+  v                v                     v
+Profile        Present matches      Draft CV + Cover Letter
+files ready    with fit ratings     (LaTeX, tailored)
+                   |                     |
+                   v                     v
+               Pick a match         Reviewer agent critiques
+               -> /apply            -> Revise -> Final output
+```
+
+The framework encodes career guidance best practices, including structured evaluation criteria, forward-looking cover letter framing, and optional salary benchmarking.
+
+## Prerequisites
+
+- [Claude Code](https://claude.com/claude-code) (CLI). Claude Code has no free tier: you need a Claude Pro/Max/Team subscription or Anthropic API credits (pay-per-token, usually cheaper for occasional use). Using a different agent tool (Codex, Antigravity, Gemini CLI)? Start at [`AGENTS.md`](AGENTS.md) - the portal search skills work there out of the box, and [community forks](https://github.com/MadsLorentzen/ai-job-search/discussions/78) adapt the full workflow.
+- Python 3.10+
+- [Bun](https://bun.sh) (for job search CLI tools)
+- LaTeX distribution with `lualatex` and `xelatex`: [TeX Live](https://tug.org/texlive/), [MacTeX](https://tug.org/mactex/), [TinyTeX](https://yihui.org/tinytex/), or [MiKTeX](https://miktex.org/). The CV compiles with `lualatex` (pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors); the cover letter compiles with `xelatex` because `cover.cls` requires `fontspec`. If using a minimal TeX install such as TinyTeX or BasicTeX, install the extra packages listed in [SETUP.md](SETUP.md#minimal-tex-install-tinytexbasictex).
+- Optional: `pip install pypdf` for `/apply`'s ATS parseability check (BSD; no Poppler required). Poppler `pdftotext` remains a fallback (macOS: `brew install poppler`, Debian/Ubuntu: `apt install poppler-utils`, Windows: `choco install poppler`). If both are missing, the check degrades to a visual keyword review.
+
+## Quick start
+
+> 🎥 **Prefer to see it in action first?** [The Next New Thing did a hands-on walkthrough](https://www.youtube.com/watch?v=HoVxjMNFYv4) of how the workflow is actually used, from setup to a finished application (recorded August 2026 - commands may have evolved since).
+
+### 1. Fork and clone
+
+```bash
+gh repo fork MadsLorentzen/ai-job-search --clone
+cd ai-job-search
+```
+
+> [!IMPORTANT]
+> **A fork of this repo is always public** — GitHub does not allow private forks of
+> public repositories — and `/setup` (step 3 below) writes your personal data (name,
+> contact details, employment history, salary expectations) into **tracked** files.
+> If this copy is for your own job search rather than for contributing changes back,
+> use a **private repository** with this repo as `upstream` instead — the two-minute
+> recipe is in [SETUP.md section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork),
+> and every update workflow works identically. Fork only to contribute.
+
+### 2. Install job search tools
+
+```bash
+python3 tools/install_portal_clis.py   # Windows: python tools\install_portal_clis.py
+```
+
+It runs `bun install` in every portal CLI under `.agents/skills/*/cli/` - discovered, not listed, so a portal you add with `/add-portal` or copy from another fork is included on a fresh clone. A CLI whose `package.json` declares an install-time lifecycle script is skipped and reported rather than run. `--dry-run` shows what it would install.
+
+For `linkedin-search` and `freehire-search` the install is optional: both have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
+
+### 3. Set up your profile
+
+```bash
+claude
+# Then inside Claude Code:
+/setup
+```
+
+`/setup` offers three paths: read your `documents/` folder if you have one populated (CV PDF, LinkedIn export, diplomas, reference letters, past applications), import a single CV pasted in chat, or walk through an interview. It auto-detects what you have and asks. Documents-folder mode is idempotent and safe to re-run as you add more material; see `documents/README.md` for the layout.
+
+### 4. Search for jobs
+
+```bash
+/scrape
+```
+
+This searches multiple job portals for positions matching your profile, deduplicates results, and presents them sorted by fit. Pick a match to run `/apply` on it directly — or, when a scrape returns more jobs than you want to eyeball, run `/rank` to batch-score them all against the fit framework and get a ranked shortlist first.
+
+### 5. Apply to a job
+
+```bash
+/apply https://jobindex.dk/job/1234567
+```
+
+If the URL can't be fetched (some job portals block automated access), you can paste the job description directly instead:
+
+```bash
+/apply <paste the full job description here>
+```
+
+This runs the full workflow: evaluate fit, draft CV + cover letter, review with a second agent, revise, and present the final output.
+
+Postings are treated as untrusted input (the workflow follows no instructions embedded in them and fetches no links from their body), but agentic defenses are instruction-level, not a sandbox - on an unfamiliar job board, skim what was fetched and written before you hit send. Details in [SECURITY.md](SECURITY.md).
+
+## Other commands
+
+`/setup`, `/scrape`, and `/apply` form the core workflow. Ten more commands extend it once your profile is in place:
+
+- **`/interview`** preps you for a scheduled interview on a tracked application. It builds a stage-specific prep pack from the application's archive (the exact posting, the CV and cover letter the interviewer actually read, feedback recorded from earlier rounds), researches the company and interviewers with a verify-before-use rule, maps likely questions to your STAR examples, and offers a mock interview following the roleplay protocol in `07-interview-prep.md`. Gaps get honest bridge answers, never invented experience.
+- **`/outcome`** records what happened to an application - interview stages, offers, rejections, silence. It archives the submitted CV, cover letter, and posting text into `documents/applications/<company>_<role>/`, keeps `outcome.md` in the format `/setup` Path A parses, and updates the tracker. It also owns the stretch before there is an outcome to record: `/outcome followup` surfaces open applications that have gone quiet (default 10 days), drafts a short channel-appropriate follow-up in your writing style using only claims from the materials you already submitted (drafts only, never sends; at most twice per application), and offers a thank-you note in the same turn an interview stage is recorded. Once a few applications resolve, it points you back to `/setup` to calibrate the fit framework from what actually got interviews.
+- **`/notion-sync`** publishes a one-way, read-only view of the pipeline into a Notion database via the official Notion MCP server (OAuth, no API keys) - one row per ranked job plus every tracked application, with a write-once briefing page per row. The repo files stay the system of record: nothing syncs back, and documents sync as filenames only. Complements `/html-report`: that is the deep offline dashboard you regenerate at your desk; this is the glanceable live view from anywhere Notion runs (desktop, web, phone).
+- **`/gmail-sync`** reads your Gmail (via the Gmail connector) for status signals on your open applications - interview invites, assessment links, offers, rejections - and proposes them as a batch for you to approve before anything is written to the tracker or `outcome.md`, citing the source email on every proposed change. Offers stop short of proposing `hired`/`offer_declined` since that's your call; conflicting or unmatched signals get flagged for a manual `/outcome` pass instead of guessed.
+- **`/rank`** bridges `/scrape` and `/apply`: it batch-scores all newly scraped postings against the fit framework (parallel agents fetch each posting and score the five evaluation dimensions) and returns a ranked shortlist with honest per-job strengths and gaps. Deal-breakers veto, deadlines get urgency flags, dead postings get marked expired. Pick a number and it hands off to the full `/apply` workflow.
+- **`/expand`** enriches your profile by scanning public sources you've already linked in it (GitHub repos, portfolio site, Kaggle, Google Scholar) and looking up syllabi for named courses and certifications. Discovered competencies are added to your profile with a source tag. Useful right after `/setup` to surface skills that documents alone don't make explicit.
+- **`/upskill`** analyzes the gap between your profile, your tracked job postings, and your ranked-but-untracked postings (`/rank`'s recorded gaps in `job_scraper/seen_jobs.json`) — or a single posting via `/upskill <URL>`. Produces a prioritized heatmap of skill gaps and a learning plan with web-searched study resources and time estimates. Useful for career planning between applications.
+- **`/html-report`** generates a self-contained HTML dashboard from `job_search_tracker.csv` and the application archives — stat cards, status/sector/channel/funnel charts (inline SVG, no external dependencies), and a filterable applications table. Opens directly in a browser, fully offline. Re-run it any time after `/apply` or `/outcome` adds new entries.
+- **`/add-template`** registers your own CV or cover letter template (LaTeX, Typst, or another toolchain) in place of the stock ones. It captures the template's instructions (source extension, compile command, fonts, style rules, page limit), runs a mandatory test compile, and wires the template into `/apply`. See [Custom templates](#custom-templates) below.
+- **`/add-portal`** generates a job-portal search skill for a job board in your market. It investigates the portal (search URL pattern, result structure, access rules), scaffolds the CLI skill from the same structure as the shipped ones, and test-runs a live query before registering. See [Job search tools](#job-search-tools) below.
+
+`/reset` is also available, see [Starting over](#starting-over) below.
+
+## File structure
+
+```
+ai-job-search/
+├── CLAUDE.md                          # Main candidate profile + workflow rules
+├── .claude/
+│   ├── commands/
+│   │   ├── apply.md                   # /apply workflow (drafter-reviewer)
+│   │   ├── setup.md                   # /setup onboarding (documents folder, CV import, or interview)
+│   │   ├── expand.md                  # /expand competency enrichment from documents and online presence
+│   │   ├── add-template.md            # /add-template register custom templates (LaTeX, Typst, ...)
+│   │   ├── add-portal.md              # /add-portal generate a job-portal search skill for your market
+│   │   ├── rank.md                    # /rank triage scraped jobs into a ranked shortlist
+│   │   ├── outcome.md                 # /outcome record application results, archive materials
+│   │   ├── gmail-sync.md              # /gmail-sync auto-detect application status from Gmail
+│   │   ├── interview.md               # /interview stage-specific prep pack + mock interview
+│   │   ├── html-report.md             # /html-report generate application tracker dashboard
+│   │   ├── notion-sync.md             # /notion-sync one-way pipeline view in a Notion database
+│   │   └── reset.md                   # /reset wipe profile data or documents folder
+│   ├── skills/
+│   │   ├── job-application-assistant/  # Core application skill
+│   │   │   ├── SKILL.md               # Skill definition
+│   │   │   ├── 01-candidate-profile.md # Your education, experience, skills
+│   │   │   ├── 02-behavioral-profile.md# PI/DISC/personality assessment
+│   │   │   ├── 03-writing-style.md    # Tone, structure, do's and don'ts
+│   │   │   ├── 04-job-evaluation.md   # Scoring framework for job fit
+│   │   │   ├── 05-cv-templates.md     # LaTeX CV structure + tailoring rules
+│   │   │   ├── 06-cover-letter-templates.md # LaTeX cover letter templates
+│   │   │   └── 07-interview-prep.md   # STAR examples + interview framework
+│   │   ├── job-scraper/               # Job search orchestration
+│   │   └── upskill/                   # /upskill skill gap analysis and learning plan
+│   └── settings.json                  # Claude Code permissions (shared, scoped)
+├── .agents/skills/                    # Job portal CLI tools
+│   ├── jobbank-search/                # Akademikernes Jobbank (Denmark)
+│   ├── jobdanmark-search/             # Jobdanmark.dk (Denmark)
+│   ├── jobindex-search/               # Jobindex.dk (Denmark)
+│   ├── jobnet-search/                 # Jobnet.dk (Denmark, government portal)
+│   ├── linkedin-search/               # LinkedIn public job listings (country-agnostic)
+│   └── freehire-search/               # freehire.me tech job aggregator (multi-market, REST API)
+├── cv/
+│   └── main_example.tex               # moderncv LaTeX template
+├── cover_letters/
+│   ├── cover.cls                      # Custom cover letter LaTeX class
+│   ├── cover_example.tex              # Example cover letter (structural reference + CI smoke test)
+│   └── OpenFonts/                     # Lato + Raleway fonts
+├── templates/                         # Custom templates registered via /add-template
+│   └── README.md                      # Folder layout instructions
+├── documents/                         # Career source materials for /setup Path A and /expand
+│   ├── README.md                      # Folder layout instructions
+│   ├── cv/                            # Master CV (PDF or .tex)
+│   ├── linkedin/                      # LinkedIn profile export (PDF)
+│   ├── diplomas/                      # Degree certificates and transcripts
+│   ├── references/                    # Reference letters
+│   └── applications/                  # Past application records (<company>_<role>/)
+├── .github/workflows/ci.yml           # CI: LaTeX smoke compiles, skill lint, CLI typechecks
+├── salary_lookup.py                   # Salary benchmarking tool (BYO data)
+├── tools/
+│   ├── check_framework_version.py     # CI check: framework_version bumped when skill files change
+│   ├── check_upstream_updates.py      # Preview which personalized files an upstream update touches
+│   ├── convert_salary_excel.py        # Convert salary Excel to JSON
+│   ├── install_portal_clis.py         # Install every discovered portal CLI (bun install)
+│   ├── lint_skills.py                 # CI lint for skills, commands, settings.json
+│   ├── robots_check.py                # Gate the browser-header retry against robots.txt
+│   ├── security_guards.py             # CI guards: permission allowlist, gitignore rules, manifests
+│   ├── upstream_triage.py             # Sort upstream commits into worth-reviewing vs probably-skip
+│   ├── verify_layout.py               # Measure a compiled PDF's page layout (holes, orphans, footer collisions)
+│   ├── verify_pdf.py                  # Verify a compiled PDF's page count and extractable text
+│   └── README_SALARY_TOOL.md          # Salary tool setup instructions
+├── job_scraper/                       # Scraper state (seen jobs, results)
+├── gmail_sync/                        # /gmail-sync state (processed message IDs, last sync date)
+├── upskill/                           # /upskill report output (markdown reports per run)
+├── job_search_tracker.csv             # Application tracking spreadsheet
+└── SETUP.md                           # Detailed setup guide
+```
+
+## How `/apply` works
+
+The `/apply` command runs a **drafter-reviewer workflow** with mandatory PDF compilation:
+
+1. **Parse** the job posting (URL or text)
+2. **Evaluate fit** against your profile (skills, experience, culture, location, career alignment)
+3. **Draft** a tailored CV and cover letter in LaTeX
+4. **Spawn a reviewer agent** that researches the company and critiques the drafts
+5. **Revise** based on the reviewer's feedback
+6. **Compile and inspect** both PDFs: lualatex for the CV, xelatex for the cover letter. Claude reads the rendered pages and iterates on the LaTeX until the CV is exactly 2 pages with no orphaned entry titles, and the cover letter is exactly 1 page with the signature visible and fonts consistent.
+7. **ATS-check the CV**: extract the PDF's text layer (`pdftotext`, optional dependency) and verify it the way an ATS parser sees it — contact details present as literal text, no garbled glyphs, sane reading order — then score the posting's keyword coverage against the extraction. Keywords the profile genuinely supports get added; genuine gaps stay visible, never stuffed.
+8. **Present** the final output with a verification checklist
+
+All claims in the CV and cover letter are verified against your actual profile. The system never fabricates skills or experience.
+
+### What makes this workflow different
+
+- **PDF verification loop.** Most LaTeX-resume templates produce "looks fine in the .tex" output that breaks in the PDF: job titles orphan to the next page, cover letters spill onto page 2, bullet fonts silently fall back to the body font. The `/apply` command compiles and visually inspects every PDF and applies targeted fixes (`\needspace`, `\enlargethispage`, font-matching wrappers for list items) until the layout is clean. This runs automatically on every application.
+- **ATS verification on the PDF text layer.** An ATS reads the PDF's embedded text, not the rendered page — and LaTeX can silently produce PDFs whose text extracts as garbage (icon glyphs where the email should be, interleaved lines from multi-column layouts). `/apply` extracts the compiled CV's text layer with `pdftotext` and verifies contact details, reading order, and the posting's keyword coverage against what a parser actually sees. Honesty rule enforced: a keyword the profile doesn't support is acknowledged as a gap, never stuffed in.
+- **Relevance-weighted CV cutting.** When a CV overflows 2 pages, the workflow does not cut mechanically from the "oldest" section. It scores each candidate line by (a) relevance to the target posting, (b) uniqueness in the document, and (c) whether the cover letter depends on it, and cuts the lowest-total-score line first. An older-role bullet that hits posting keywords survives ahead of a recent-role bullet that does not.
+- **Drafter-reviewer separation.** The drafter writes; a second Claude agent, spawned with a fresh context, researches the company and critiques the drafts. The drafter then revises. This catches missed keywords, weak framing, and generic language that a single pass often leaves in.
+- **Token-efficient reviewer dispatch.** The reviewer agent receives drafts inline rather than re-reading them, and the verification checklist runs once at the end of the workflow rather than being duplicated by both agents. Note: the new compile-and-inspect step in Step 5 spends some of those savings on PDF rendering and layout iteration — the workflow trades some end-to-end token cost for a real reduction in broken PDFs reaching the user.
+
+## Customization
+
+### Which files to edit manually
+
+If you prefer editing files directly instead of using `/setup`:
+
+| File | What to change |
+|------|---------------|
+| `CLAUDE.md` | Your full profile (name, education, experience, skills, goals) |
+| `01-candidate-profile.md` | Structured version of your CV data |
+| `02-behavioral-profile.md` | Your behavioral assessment or self-assessment |
+| `04-job-evaluation.md` | Skill match areas, career goals, motivation filters |
+| `05-cv-templates.md` | Profile statement templates for different role types |
+| `07-interview-prep.md` | Your STAR examples from actual experience |
+| `search-queries.md` | Job search queries for your skills and location |
+
+### Updating your search queries
+
+As your priorities evolve, you can reconfigure just the job search without re-running the full profile setup:
+
+```
+/setup --section search
+```
+
+This re-runs the search configuration interview: which roles to target, which skills to search for, which locations, and which portals. It also suggests role types you may not have considered based on your profile.
+
+### Custom templates
+
+The CV uses [moderncv](https://ctan.org/pkg/moderncv) (banking style). The cover letter uses a custom `cover.cls` with Lato/Raleway fonts. Both are LaTeX — the reference engine this repo ships and maintains.
+
+To use your own template instead — LaTeX, [Typst](https://typst.app/), or any other toolchain that compiles to PDF from the command line — run:
+
+```
+/add-template
+```
+
+Point it at your source file (a `.tex` file plus any `.cls`/`.sty` files or bundled fonts; a `.typ` file plus any local packages; or an equivalent for another toolchain). The command interviews you for the template's instructions — source extension, compile command, fonts and where they live, style rules to preserve, hard page limit — stores everything under `templates/`, runs a mandatory test compile, and activates the template so `/apply` drafts and compiles from it. Templates are stored with `[PLACEHOLDER]` tokens instead of personal data, so they're safe to commit and share.
+
+- `/add-template --list` shows registered templates
+- `/add-template --use <name>` switches between them
+- `/add-template --use default` reverts to the stock moderncv / cover.cls templates
+
+If you prefer doing it by hand, the manual route still works: update the guidance in `05-cv-templates.md` and `06-cover-letter-templates.md`.
+
+### Job search tools
+
+The four Danish CLI tools in `.agents/skills/` (Jobbank, Jobdanmark, Jobindex, Jobnet) demonstrate the pattern for building a job-portal integration for a specific market. If you're in a different country, run:
+
+```
+/add-portal
+```
+
+Give it your local job board's URL. The command investigates the portal (search-URL pattern, result-page structure, robots.txt/access rules), scaffolds a CLI skill with the same structure, commands, and output contract as the shipped ones, and test-runs a live query before registering anything. Auth-walled portals are declined, and portals with restrictive terms get a prominent personal-use-only warning in the generated skill. The generated skill is market-specific and lives in your fork; the generator itself is the universal part.
+
+Maintaining a fork adapted to your market or language? Add it to the [Community forks & adaptations](https://github.com/MadsLorentzen/ai-job-search/discussions/78) thread so others can find it.
+
+For **country-agnostic** starting points outside Denmark, the repo ships two portal skills alongside the Danish demos:
+
+- **`linkedin-search`** — built on LinkedIn's public, unauthenticated `jobs-guest` endpoints. Field-agnostic, **zero runtime dependencies** (runs with just `bun`), and takes the search location as an explicit flag, so it works for any market out of the box (`-l "Berlin, Germany"`, `-l "Mumbai, Maharashtra, India"`, `-l "Remote"`, …). Intended for **personal use only** — automated access is against LinkedIn's Terms of Service, so keep volume low. See `.agents/skills/linkedin-search/SKILL.md`.
+- **`freehire-search`** — queries the [freehire.me](https://freehire.me) aggregator's public REST API (JSON, no API key). Tech-focused (software, data, engineering, DevOps, remote), multi-market via facet flags (`--region`, `--country`, `--remote`), and **zero runtime dependencies**. Unlike the HTML-scraping Danish portals, results come back structured (skills, seniority, category). The backend is MIT-licensed and [self-hostable](https://github.com/strelov1/freehire) — point `FREEHIRE_API_URL` at your own instance if you prefer. See `.agents/skills/freehire-search/SKILL.md`.
+
+### Extending the framework: portals, templates, criteria - and borrowing from other forks
+
+Everything above adds up to an extension model, so here it is stated plainly. The framework has three extension points, and none of them require touching upstream:
+
+1. **Portal skills** - the module system for job boards. Every `*-search` skill is a self-contained folder under `.agents/skills/` with the same contract (a `search`/`detail` CLI, `--format json|table|plain` output, an `enabled:` flag in its `SKILL.md`, its own tests). `/scrape` auto-discovers any installed skill that follows the contract - nothing to register, nothing to wire up. `/add-portal` generates new ones; the [community portal index](https://github.com/MadsLorentzen/ai-job-search/discussions/78) catalogs the ones other forks have built.
+2. **Document templates** - `/add-template` registers any CV or cover-letter toolchain that compiles to PDF from the command line, LaTeX or otherwise.
+3. **Evaluation criteria** - deal-breakers and preferences in your profile are free-form, and the evaluation rubric scores against whatever you put there. "Strong parental-leave terms", "minimum salary X per my union's scale", "no on-call" - each is one profile line, no code, and it carries real weight in `/rank` and `/apply` fit evaluations. Language is the one deal-breaker type with dedicated, structured handling: `/setup` captures every language you work in and your level (asked directly, or inferred from your CV/LinkedIn export) into a `Languages` table, and the Language Gate (`04-job-evaluation.md`) hard-rejects a posting that requires a language you haven't declared at all, while flagging - not auto-rejecting - one that asks for a higher level than you declared in a language you do work in, so a borderline case (a strict "fluent" bar against your own B1/B2, say) gets your judgment instead of a silent drop.
+
+**Borrowing a portal skill from another fork** is the intended way to get a board that upstream doesn't ship: find it in the [portal index](https://github.com/MadsLorentzen/ai-job-search/discussions/78), open that fork, and copy the one folder into your own `.agents/skills/`. Before you run it:
+
+- **Read the code.** All of it - these CLIs run pre-approved on your machine (`.claude/settings.json` allowlists them) against your career data. Check that the only network calls go to the job board it claims to search, that `package.json` has no `dependencies` and no lifecycle scripts (`postinstall` etc.), and that nothing reads or writes outside its own folder.
+- **Run its tests offline** (`bun test` in the skill's `cli/` directory) - a well-built skill's tests pass with no network access.
+- Check the `enabled:` flag and the skill's own ToS notes.
+
+The copy step is manual on purpose. Your settings already allow installed portal skills to run without asking each time - so an installer that fetched them from third-party repos for you would skip the one check that matters: you, reading the code first. There isn't one, and that's a security decision rather than a missing feature.
+
+Market-specific *data sources* (a national salary database, local award-rate tables) follow the same pattern as portals: they belong in a market fork, shared via [#78](https://github.com/MadsLorentzen/ai-job-search/discussions/78), not upstream.
+
+### Salary benchmarking
+
+The salary tool works with any salary data you provide (union statistics, Glassdoor exports, personal research, etc.). See `tools/README_SALARY_TOOL.md` for the expected format and setup. If you don't have salary data, the salary step is simply skipped.
+
+### Starting over
+
+To wipe your profile data and start fresh:
+
+```
+/reset profile    # clears skill files, preserves framework rules
+/reset documents  # deletes files from documents/ folder
+/reset all        # both
+```
+
+`/reset` shows exactly what will be deleted and requires you to type `RESET` to confirm. Nothing is deleted until you do.
+
+### Staying up to date
+
+Upstream moves fast. Rather than pulling raw `master` and hoping, update your fork to a tagged [release](../../releases) - a vetted checkpoint described in [CHANGELOG.md](CHANGELOG.md). `python3 tools/check_upstream_updates.py` previews exactly which of your personalized files an update touches before you merge, and `python3 tools/upstream_triage.py` sorts the commits you're behind into "worth reviewing" vs "probably skip" (a weekly workflow can post this to a rolling issue). Full walkthrough in [SETUP.md, section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork).
+
+## Tips for better results
+
+### Profile depth matters
+
+The single biggest factor in output quality is how much detail you put into your profile. A thin profile produces generic applications; a detailed one enables genuinely tailored results.
+
+- **Role descriptions:** Don't just list job titles. Describe what you actually did in each position: specific projects, tools used, responsibilities, and measurable achievements. The more material you provide, the more precisely the system can reframe your experience for different roles.
+- **Skills in context:** Instead of listing "Python" or "project management," describe how and where you applied them. "Built ML pipelines for customer churn prediction in Python using scikit-learn" gives the system far more to work with than "Python, machine learning."
+- **All onboarding paths work:** Whether you point `/setup` at your `documents/` folder, paste a single CV, or walk through the interview, the principle is the same: richer input produces sharper output.
+
+### Career path discovery
+
+The framework supports two distinct modes of job searching:
+
+- **Explicit targeting:** You know which roles or sectors you want. The system helps refine and prioritize based on fit.
+- **Latent opportunity discovery:** By analyzing your full history (not just job titles, but the actual work you did), the system can surface career paths you haven't considered. Transferable skills that map to unexpected industries, patterns in what you enjoyed or excelled at, or emerging roles that combine your domain expertise with new technology.
+
+To get the most from this, invest time during `/setup` in describing not just your experience, but what energized you, what drained you, and what you'd want more of. This context directly shapes how the system evaluates fit and which roles it surfaces during `/scrape`.
+
+## Contributing
+
+Thinking about a PR? Read [CONTRIBUTING.md](CONTRIBUTING.md) first - it explains what gets merged, what lives in forks, and why.
+
+## Acknowledgements
+
+- [Mikkel Krogholm](https://github.com/mikkelkrogsholm) ([skills repo](https://github.com/mikkelkrogsholm/skills)) for the job search CLI skills
+- Built with [Claude Code](https://claude.com/claude-code) by [Anthropic](https://anthropic.com)
 
 ## License
-```
-Copyright (C) 2016 Bin Jing
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
-
-[1]:https://img.shields.io/:license-apache%202.0-blue.svg
-[2]:https://www.apache.org/licenses/LICENSE-2.0.html
-[3]:https://img.shields.io/badge/API-21%2B-red.svg?style=flat
-[4]:https://android-arsenal.com/api?level=21
-[30]:https://img.shields.io/badge/release-3.8.3-red.svg
-[31]:https://github.com/youlookwhat/CloudReader/releases
-[32]:https://img.shields.io/badge/PRs-welcome-brightgreen.svg
-[33]:https://github.com/youlookwhat/CloudReader/pulls
-[34]:https://img.shields.io/badge/download-apk-blue.svg
-[35]:https://github.com/youlookwhat/download/raw/main/CloudReader.apk
-[36]:https://api.codacy.com/project/badge/Grade/1045e902e1294badaf783a640869c208?isInternal=true
-[37]:https://app.codacy.com/manual/youlookwhat/CloudReader/dashboard?bid=14239237
-
-[5]:http://youlookwhat.github.io/2017/11/23/%E5%BC%80%E5%8F%91%E4%B8%AD%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E5%BD%92%E7%BA%B3/
-[6]:http://www.iconfont.cn/plus
-[7]:https://github.com/GiitSmile/ImitateNetEasyCloud
-[8]:https://github.com/forezp/banya
-[9]:https://gank.io/api
-[11]:https://github.com/bumptech/glide
-[12]:https://github.com/Flipboard/bottomsheet
-[13]:https://github.com/JakeWharton/NineOldAndroids
-[14]:https://github.com/ReactiveX/RxAndroid
-[15]:https://github.com/daimajia
-[16]:https://github.com/hongyangAndroid
-[17]:https://github.com/drakeet
-[18]:https://github.com/yang747046912
-
-[21]:https://github.com/youlookwhat/CloudReader/issues
-
-[23]:http://www.jianshu.com/p/69a229fb6e1d
-[24]:http://youlookwhat.github.io/2017/11/23/%E5%BC%80%E5%8F%91%E4%B8%AD%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E5%BD%92%E7%BA%B3/
-[25]:http://youlookwhat.github.io/2016/12/25/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-%E4%BA%91%E9%98%85/
-[26]:https://blog.csdn.net/jingbin_/column/info/34963
-[27]:http://www.wanandroid.com/index
-[28]:https://github.com/youlookwhat/ByRecyclerView
+MIT
